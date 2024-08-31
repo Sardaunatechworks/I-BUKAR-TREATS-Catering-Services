@@ -1,0 +1,12 @@
+function redirectToWhatsApp() {
+    const name = document.getElementById('name').value;
+    const phone = document.getElementById('phone').value;
+    const order = document.getElementById('order').value;
+
+    const whatsappNumber = '+234706330 2219';
+    const whatsappMessage = `Hello, my name is ${name}. My order is: ${order}.  ${phone}.`;
+
+    const whatsappURL = `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(whatsappMessage)}`;
+
+    window.open(whatsappURL, '_blank');
+}
